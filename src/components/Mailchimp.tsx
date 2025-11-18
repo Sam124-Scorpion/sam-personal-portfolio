@@ -88,7 +88,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
         dots={{
           display: mailchimp.effects.dots.display,
           opacity: mailchimp.effects.dots.opacity as opacity,
-          size: mailchimp.effects.dots.size as SpacingToken,
+          size: mailchimp.effects.dots.size as unknown as SpacingToken,
           color: mailchimp.effects.dots.color,
         }}
         grid={{
@@ -101,9 +101,6 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
         lines={{
           display: mailchimp.effects.lines.display,
           opacity: mailchimp.effects.lines.opacity as opacity,
-          size: mailchimp.effects.lines.size as SpacingToken,
-          thickness: mailchimp.effects.lines.thickness,
-          angle: mailchimp.effects.lines.angle,
           color: mailchimp.effects.lines.color,
         }}
       />
