@@ -1,6 +1,7 @@
 import { Column, Meta, Schema } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { Projects } from "@/components/work/Projects";
+import { text } from "stream/consumers";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -28,6 +29,7 @@ export default function Work() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+<h1 style={{ marginBottom: "3rem" , textAlign: "center", fontWeight: "bold", fontSize: "4rem" }}>My <span style={{color : "#17B6F0"}}>{work.label}s</span></h1>      
       <Projects />
     </Column>
   );

@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useEffect, useRef } from 'react';
 import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Meta, Schema } from "@once-ui-system/core";
 import { home, about, person, newsletter, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
@@ -7,6 +6,7 @@ import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
 export default function Home() {
+
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
       <Schema
@@ -76,7 +76,7 @@ export default function Home() {
             </Heading>
           </Flex>
           <Flex flex={3} paddingX="20">
-            <Posts range={[1, 2]} columns="2" /> // Using Posts component to display projects temporarily
+                
           </Flex>
         </Flex>
       </RevealFx>
