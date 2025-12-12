@@ -14,7 +14,7 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: (
     <>
       I occasionally write about design, technology, and share thoughts on the intersection of
@@ -62,7 +62,7 @@ const home = {
   },
   subline: (
     <>
-      I'm soumik, a designer engineer at Creative Sam Studio, where I craft intuitive
+      I&apos;m soumik, a designer engineer at Creative Sam Studio, where I craft intuitive
       <br /> user experiences. After hours, I build my own projects.
     </>
   ),
@@ -198,7 +198,7 @@ const about = {
     institutions: [
       {
         name: "Brainware University",
-        description: <>Pursuing a Bachelor's degree in Computer Science and Engineering, focusing on software development, data structures, algorithms, and modern web technologies.</>,
+        description: <>Pursuing a Bachelor&apos;s degree in Computer Science and Engineering, focusing on software development, data structures, algorithms, and modern web technologies.</>,
       },
       {
         name: "Higher Secondary Education",
