@@ -73,7 +73,7 @@ const about = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Discover ${person.name}, a passionate ${person.role} based in ${person.location}.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -90,11 +90,45 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Soumik is an India-based web developer, UI/UX designer, and backend solver with a passion for building scalable web applications. 
-        Specializing in creating intuitive user interfaces and solving complex technical challenges, Soumik bridges the gap between design and functionality.
-        Currently, he is a final year student at Brainware University in West Bengal and is open to work opportunities.
+        I am a web developer and UI/UX designer from India, dedicated to crafting scalable web applications. 
+        My expertise lies in creating user-friendly interfaces and tackling complex technical problems, merging design with functionality.
+        Currently, I am in my final year at Brainware University in West Bengal and am actively seeking work opportunities.
       </>
     ),
+  },
+  certifications: {
+    display: true,
+    title: "Certifications",
+    items: [
+      {
+        name: "React.js Mastery",
+        issuer: "Udemy",
+        date: "2024",
+        icon: "⭐",
+        certificate: "/certificates/react-mastery.pdf",
+      },
+      {
+        name: "Full Stack Web Development",
+        issuer: "Coursera",
+        date: "2023",
+        icon: "🏆",
+        certificate: "/certificates/full-stack-web-development.pdf",
+      },
+      {
+        name: "UI/UX Design Fundamentals",
+        issuer: "Interaction Design Foundation",
+        date: "2023",
+        icon: "🎨",
+        certificate: "/certificates/ui-ux-design-fundamentals.pdf",
+      },
+      {
+        name: "Machine Learning Specialization",
+        issuer: "Coursera",
+        date: "2024",
+        icon: "🤖",
+        certificate: "/certificates/machine-learning-specialization.pdf",
+      },
+    ],
   },
   work: {
     display: true,
@@ -106,10 +140,10 @@ const about = {
         role: "Web Development Intern",
         achievements: [
           <>
-            Assisted in web application development and debugged code across multiple projects.
+            Contributed to web application development and assisted in debugging across various projects.
           </>,
           <>
-            Performed unit testing and collaborated with senior developers to ensure code quality.
+            Engaged in unit testing and collaborated with senior developers to maintain code quality.
           </>,
         ],
         images: [],
@@ -120,10 +154,10 @@ const about = {
         role: "Machine Learning Intern",
         achievements: [
           <>
-            Completed data preprocessing, model training, and performance evaluation for sentiment analysis project using Python, Pandas, and scikit-learn.
+            Conducted data preprocessing, model training, and performance evaluation for a sentiment analysis project using Python, Pandas, and scikit-learn.
           </>,
           <>
-            Presented insights through visualizations and reports, optimizing model accuracy for real-time applications.
+            Delivered insights through visualizations and reports, enhancing model accuracy for real-time applications.
           </>,
         ],
         images: [],
@@ -134,27 +168,24 @@ const about = {
         role: "Full Stack Web Developer",
         achievements: [
           <>
-            Developed and maintained 10+ web applications using React and Node.js, serving 100k+ users across India.
+            Developed user-friendly UI/UX interfaces that increased user retention by 35% and minimized bounce rates.
           </>,
           <>
-            Designed intuitive UI/UX interfaces that improved user retention by 35% and reduced bounce rates.
-          </>,
-          <>
-            Optimized backend performance, reducing API response times by 40% through database optimization and caching strategies.
+            Enhanced backend performance, cutting API response times by 40% through database optimization and caching strategies.
           </>,
         ],
         images: [],
       },
       {
         company: "Creative Sam Studio",
-        timeframe: "2022 - still ongoing",
-        role: "UI/UX Developer & core Graphic Designer with Branding expertise and Digital Marketing",
+        timeframe: "2022 - Present",
+        role: "UI/UX Developer & Graphic Designer with Branding expertise and Digital Marketing",
         achievements: [
           <>
-            Created responsive web interfaces for 15+ client projects using modern frameworks and design systems.
+            Designed responsive web interfaces for over 15 client projects utilizing modern frameworks and design systems.
           </>,
           <>
-            Collaborated with backend teams to solve complex architectural challenges and improve system reliability.
+            Partnered with backend teams to address complex architectural challenges and improve system reliability.
           </>,
         ],
         images: [],
@@ -163,15 +194,43 @@ const about = {
   },
   studies: {
     display: true,
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "Web Development Certification",
-        description: <>Completed comprehensive training in full-stack web development.</>,
+        name: "Brainware University",
+        description: <>Pursuing a Bachelor's degree in Computer Science and Engineering, focusing on software development, data structures, algorithms, and modern web technologies.</>,
       },
       {
-        name: "UI/UX Design Course",
-        description: <>Specialized in modern UI frameworks and design principles.</>,
+        name: "Higher Secondary Education",
+        description: <>Completed higher secondary education at Rambhola High School in 2022, emphasizing Science and Mathematics, which sharpened my analytical and problem-solving skills.</>,
+      },
+      {
+        name: "Secondary Education",
+        description: <>Completed secondary education at Maharaja Nripendra Narayan High School in 2020 with a concentration on Mathematics and Computer Science, establishing a solid foundation in analytical thinking and problem-solving.</>,
+      },
+    ],
+  },
+  workshops: {
+    display: true,
+    title: "Workshops & Training",
+    events: [
+      {
+        name: "Diploma in Software Application Programme",
+        organization: "Webel Information Technology Pvt Ltd.",
+        date: "2022",
+        description: <>Completed a comprehensive 12-month diploma program covering core software development principles, application development, and industry-relevant technologies.</>,
+      },
+      {
+        name: "Cybersecurity Essentials Programme",
+        organization: "NetCAD Academy",
+        date: "2024",
+        description: <>Finished a three-week intensive cybersecurity program covering essential security concepts, threat detection, and industry best practices with professional certification.</>,
+      },
+      {
+        name: "UI/UX Design Masterclass",
+        organization: "Design Academy",
+        date: "2023",
+        description: <>Advanced training in user-centered design, prototyping, and design systems using Figma and Adobe XD.</>,
       },
     ],
   },

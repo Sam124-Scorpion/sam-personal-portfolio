@@ -28,6 +28,25 @@ export async function generateMetadata() {
 }
 
 export default function About() {
+  // Full Certificate images
+  const certificates = [
+    
+    { name: "Certificate 1", file: "/certificates/cert1_page-0001 (1).jpg", type: "certificate" },
+    { name: "Certificate 2", file: "/certificates/cert2_page-0001.jpg", type: "certificate" },
+    { name: "Certificate 3", file: "/certificates/cert3_page-0001.jpg", type: "certificate" },
+    { name: "Certificate 4", file: "/certificates/cert4_page-0001.jpg", type: "certificate" },
+    { name: "Certificate 6", file: "/certificates/cert6_page-0001.jpg", type: "certificate" },
+    { name: "IBM Design Certificate 1", file: "/certificates/IBMDesign20250812-30-iya9bc_page-0001.jpg", type: "certificate" },
+    { name: "IBM Design Certificate 2", file: "/certificates/IBMDesign20250813-32-jbr5wm_page-0001.jpg", type: "certificate" },
+  ];
+
+  // Digital Badges/Stickers
+  const badges = [
+    { name: "Retrieval-Augmented Generation", file: "/certificates/Digital Sticker_ Introduction to Retrieval-Augmented Generation.png", type: "badge" },
+    { name: "AI Fundamentals", file: "/certificates/AI_Fundamentals cred.png", type: "certificate" },
+    { name: "Ethical Considerations for Generative AI", file: "/certificates/Digital sticker_Ethical Considerations for Generative AI.png", type: "badge" },
+  ];
+
   const structure = [
     {
       title: about.intro.title,
@@ -43,6 +62,16 @@ export default function About() {
       title: about.studies.title,
       display: about.studies.display,
       items: about.studies.institutions.map((institution) => institution.name),
+    },
+    {
+      title: about.certifications.title,
+      display: about.certifications.display,
+      items: [...certificates, ...badges].map((cert) => cert.name),
+    },
+    {
+      title: about.workshops?.title || "Workshops & Training",
+      display: about.workshops?.display || false,
+      items: about.workshops?.events?.map((event) => event.name) || [],
     },
     {
       title: about.technical.title,
@@ -114,7 +143,7 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
+            {/* {about.calendar.display && (
               <Flex
                 fitWidth
                 border="brand-alpha-medium"
@@ -138,7 +167,7 @@ export default function About() {
                   icon="chevronRight"
                 />
               </Flex>
-            )}
+            )} */}
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>
@@ -185,14 +214,149 @@ export default function About() {
           {about.intro.display && (
             <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
               {about.intro.description}
-                                <Button
-                    href="/my_cv.pdf"
-                    variant="primary"
-                    label="Download CV"
-                    download="my_cv.pdf" // Try adding this
-                    style={{backgroundColor : "transparent", border : "2px solid white" , color : "white"}}
-                  />
+              <Button
+                href="/my_cv.pdf"
+                variant="primary"
+                label="Download CV"
+                download="my_cv.pdf" // Try adding this
+                style={{ backgroundColor: "transparent", border: "2px solid white", color: "white" }}
+              />
             </Column>
+          )}
+          {about.certifications.display && (
+            <>
+              <Heading as="h2" id={about.certifications.title} variant="display-strong-s" marginBottom="m">
+                {about.certifications.title}
+              </Heading>
+              
+              {/* Certificates Marquee */}
+              <Text variant="body-default-m" onBackground="neutral-weak" marginBottom="s">
+                📜 Professional Certificates
+              </Text>
+              <div className={styles.marqueeContainer}>
+                <div className={styles.marqueeContent}>
+                  {certificates.map((cert, index) => (
+                    <a 
+                      key={`cert-1-${index}`} 
+                      href={cert.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.certificationCard}
+                    >
+                      <img 
+                        src={cert.file} 
+                        alt={cert.name}
+                        style={{
+                          width: "100%",
+                          height: "200px",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                          marginBottom: "12px"
+                        }}
+                      />
+                      <div className={styles.certName}>{cert.name}</div>
+                      <div className={styles.certDetails}>
+                        <span>Certificate</span>
+                        <span>•</span>
+                        <span>Click to view</span>
+                      </div>
+                    </a>
+                  ))}
+                  {certificates.map((cert, index) => (
+                    <a 
+                      key={`cert-2-${index}`} 
+                      href={cert.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.certificationCard}
+                    >
+                      <img 
+                        src={cert.file} 
+                        alt={cert.name}
+                        style={{
+                          width: "100%",
+                          height: "200px",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                          marginBottom: "12px"
+                        }}
+                      />
+                      <div className={styles.certName}>{cert.name}</div>
+                      <div className={styles.certDetails}>
+                        <span>Certificate</span>
+                        <span>•</span>
+                        <span>Click to view</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Badges Marquee - Reverse Direction */}
+              <Text variant="body-default-m" onBackground="neutral-weak" marginBottom="s" marginTop="m">
+                🏆 Digital Badges & Achievements
+              </Text>
+              <div className={styles.marqueeContainer}>
+                <div className={`${styles.marqueeContent} ${styles.marqueeReverse}`}>
+                  {badges.map((badge, index) => (
+                    <a 
+                      key={`badge-1-${index}`} 
+                      href={badge.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.badgeCard}
+                    >
+                      <img 
+                        src={badge.file} 
+                        alt={badge.name}
+                        style={{
+                          width: "100%",
+                          height: "180px",
+                          objectFit: "contain",
+                          borderRadius: "8px",
+                          marginBottom: "12px",
+                          padding: "10px"
+                        }}
+                      />
+                      <div className={styles.certName}>{badge.name}</div>
+                      <div className={styles.certDetails}>
+                        <span>Digital Badge</span>
+                        <span>•</span>
+                        <span>Click to view</span>
+                      </div>
+                    </a>
+                  ))}
+                  {badges.map((badge, index) => (
+                    <a 
+                      key={`badge-2-${index}`} 
+                      href={badge.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.badgeCard}
+                    >
+                      <img 
+                        src={badge.file} 
+                        alt={badge.name}
+                        style={{
+                          width: "100%",
+                          height: "180px",
+                          objectFit: "contain",
+                          borderRadius: "8px",
+                          marginBottom: "12px",
+                          padding: "10px"
+                        }}
+                      />
+                      <div className={styles.certName}>{badge.name}</div>
+                      <div className={styles.certDetails}>
+                        <span>Digital Badge</span>
+                        <span>•</span>
+                        <span>Click to view</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </>
           )}
 
           {about.work.display && (
@@ -268,8 +432,36 @@ export default function About() {
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}
                     </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                    <Text variant="body-default-m" onBackground="neutral-weak">
                       {institution.description}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.workshops?.display && (
+            <>
+              <Heading as="h2" id={about.workshops.title} variant="display-strong-s" marginBottom="m">
+                {about.workshops.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.workshops.events.map((event, index) => (
+                  <Column key={`${event.name}-${index}`} fillWidth gap="4">
+                    <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
+                      <Text id={event.name} variant="heading-strong-l">
+                        {event.name}
+                      </Text>
+                      <Text variant="heading-default-xs" onBackground="neutral-weak">
+                        {event.date}
+                      </Text>
+                    </Flex>
+                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="4">
+                      {event.organization}
+                    </Text>
+                    <Text variant="body-default-m" onBackground="neutral-weak">
+                      {event.description}
                     </Text>
                   </Column>
                 ))}

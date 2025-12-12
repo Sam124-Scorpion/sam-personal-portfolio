@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react';
 import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Meta, Schema } from "@once-ui-system/core";
 import { home, about, person, newsletter, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
@@ -74,10 +73,9 @@ export default function Home() {
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
               Latest from the Projects
             </Heading>
+            
           </Flex>
-          <Flex flex={3} paddingX="20">
-                
-          </Flex>
+
         </Flex>
       </RevealFx>
       {routes["/blog"] && (
