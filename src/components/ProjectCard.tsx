@@ -40,7 +40,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         }))}
       />
       <Flex
-        mobileDirection="column"
+        direction="column"
         fillWidth
         paddingX="s"
         paddingTop="12"
@@ -48,7 +48,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         gap="l"
       >
         {title && (
-          <Flex flex={5}>
+          <Flex flex={5} direction="column">
             <Heading as="h2" wrap="balance" variant="heading-strong-xl">
               {title}
             </Heading>
