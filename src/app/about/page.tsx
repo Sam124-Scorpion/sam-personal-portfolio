@@ -16,6 +16,7 @@ import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
+import Image from "next/image";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -102,17 +103,18 @@ export default function About() {
           position="fixed"
           paddingLeft="24"
           gap="32"
-          className="s-hide"
+          className="m-hide"
         >
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
-      <Flex fillWidth direction="column" horizontal="center">
+      <Flex fillWidth wrap horizontal="center">
         {about.avatar.display && (
           <Column
             className={styles.avatar}
             position="sticky"
             minWidth="160"
+            maxWidth={200}
             paddingX="l"
             paddingBottom="xl"
             gap="m"
@@ -194,14 +196,14 @@ export default function About() {
                           weight="default"
                           variant="secondary"
                         />
-                        <IconButton
+                        {/* <IconButton
                           className="s-flex-show"
                           size="l"
                           key={`${item.name}-icon`}
                           href={item.link}
                           icon={item.icon}
                           variant="secondary"
-                        />
+                        /> */}
                       </React.Fragment>
 
                     ),
@@ -243,9 +245,11 @@ export default function About() {
                       rel="noopener noreferrer"
                       className={styles.certificationCard}
                     >
-                      <img 
+                      <Image 
                         src={cert.file} 
                         alt={cert.name}
+                        width={320}
+                        height={200}
                         style={{
                           width: "100%",
                           height: "200px",
@@ -270,9 +274,11 @@ export default function About() {
                       rel="noopener noreferrer"
                       className={styles.certificationCard}
                     >
-                      <img 
+                      <Image 
                         src={cert.file} 
                         alt={cert.name}
+                        width={320}
+                        height={200}
                         style={{
                           width: "100%",
                           height: "200px",
@@ -306,9 +312,11 @@ export default function About() {
                       rel="noopener noreferrer"
                       className={styles.badgeCard}
                     >
-                      <img 
+                      <Image 
                         src={badge.file} 
                         alt={badge.name}
+                        width={280}
+                        height={180}
                         style={{
                           width: "100%",
                           height: "180px",
@@ -334,9 +342,11 @@ export default function About() {
                       rel="noopener noreferrer"
                       className={styles.badgeCard}
                     >
-                      <img 
+                      <Image 
                         src={badge.file} 
                         alt={badge.name}
+                        width={280}
+                        height={180}
                         style={{
                           width: "100%",
                           height: "180px",

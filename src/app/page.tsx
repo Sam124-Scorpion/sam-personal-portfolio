@@ -68,7 +68,7 @@ export default function Home() {
       </Column>
       <RevealFx translateY="16" delay={0.6} fillWidth horizontal="start" paddingBottom="16">
           {/* <Projects range={[1, 1]} /> */}
-          <Flex fillWidth gap="24" mobileDirection="column">
+          <Flex fillWidth gap="24" direction="column">
           <Flex flex={1} paddingLeft="l" paddingTop="24">
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
               Latest from the Projects
@@ -79,7 +79,7 @@ export default function Home() {
         </Flex>
       </RevealFx>
       {routes["/blog"] && (
-        <Flex fillWidth gap="24" mobileDirection="column">
+        <Flex fillWidth gap="24" direction="column">
           <Flex flex={1} paddingLeft="l" paddingTop="24">
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
               Latest from the blog

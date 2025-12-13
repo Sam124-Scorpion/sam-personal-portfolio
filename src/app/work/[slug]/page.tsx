@@ -82,6 +82,9 @@ export default async function Project({
           radius="m"
           alt="image"
           src={post.metadata.images[0]}
+          style={{
+            transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+          }}
         />
       )}
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">

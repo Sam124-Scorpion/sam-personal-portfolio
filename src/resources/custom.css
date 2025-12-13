@@ -52,3 +52,28 @@
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+
+/* Smooth image transitions for work projects */
+img, picture, video, canvas, svg {
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth hover effects for media */
+[data-component="Media"] {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-component="Media"]:hover {
+  transform: scale(1.02);
+}
+
+/* Hide on mobile/small screens */
+.m-hide {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .m-hide {
+    display: none !important;
+  }
+}

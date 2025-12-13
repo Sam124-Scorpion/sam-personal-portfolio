@@ -1,10 +1,11 @@
 @use "../breakpoints.scss" as breakpoints;
 
 .hover {
-    transition: var(--transition-micro-medium);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
         transform: translateX(var(--static-space-4));
+        opacity: 1;
     }
 }
 
@@ -119,7 +120,12 @@
 
 @media (max-width: breakpoints.$s) {
     .avatar {
+        position: relative;
         top: auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: var(--static-space-24);
     }
 
     .textAlign {
@@ -140,9 +146,11 @@
 
     .certificationCard {
         min-width: 250px;
+        max-width: 250px;
     }
 
     .badgeCard {
         min-width: 220px;
+        max-width: 220px;
     }
 }
