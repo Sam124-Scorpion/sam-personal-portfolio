@@ -80,39 +80,29 @@
   }
 }
 
-/* Completely disable transforms and transitions on touch devices */
+/* Disable hover effects on touch devices - keep animations working */
 @media (hover: none) and (pointer: coarse) {
-  *:not([class*="marquee"]),
-  *:not([class*="marquee"])::before,
-  *:not([class*="marquee"])::after {
-    transition: none !important;
-  }
-  
-  *:hover,
-  *:active,
-  *:focus,
-  *:visited {
+  a:not([class*="marquee"]):hover,
+  button:not([class*="marquee"]):hover,
+  [role="button"]:not([class*="marquee"]):hover,
+  *:not([class*="marquee"]):hover,
+  *:not([class*="marquee"]):active,
+  *:not([class*="marquee"]):focus {
     transform: none !important;
     scale: 1 !important;
     box-shadow: none !important;
   }
-  
-  a:hover, button:hover, [role="button"]:hover {
-    transform: none !important;
-  }
 }
 
-/* Additional mobile safety - disable on small screens too */
+/* Disable hover effects on small screens - keep animations working */
 @media (max-width: 768px) {
-  *:not([class*="marquee"]),
-  *:not([class*="marquee"])::before,
-  *:not([class*="marquee"])::after {
-    transition: none !important;
-  }
-  
-  *:hover,
-  *:active {
+  a:not([class*="marquee"]):hover,
+  button:not([class*="marquee"]):hover,
+  [role="button"]:not([class*="marquee"]):hover,
+  *:not([class*="marquee"]):hover,
+  *:not([class*="marquee"]):active {
     transform: none !important;
     scale: 1 !important;
+    box-shadow: none !important;
   }
 }
