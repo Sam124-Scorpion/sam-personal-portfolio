@@ -147,10 +147,30 @@
     .certificationCard {
         min-width: 250px;
         max-width: 250px;
+        transition: none !important;
+        transform: none !important;
+        
+        &:hover,
+        &:active,
+        &:focus {
+            transform: none !important;
+            box-shadow: none !important;
+            border-color: var(--neutral-border-medium) !important;
+        }
     }
 
     .badgeCard {
         min-width: 220px;
         max-width: 220px;
+        transition: none !important;
+        transform: none !important;
+        
+        &:hover,
+        &:active,
+        &:focus {
+            transform: none !important;
+            box-shadow: none !important;
+            border-color: var(--accent-border-medium) !important;
+        }
     }
 }

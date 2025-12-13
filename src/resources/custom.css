@@ -53,18 +53,20 @@
   /*
 }*/
 
-/* Smooth image transitions for work projects */
-img, picture, video, canvas, svg {
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Smooth image transitions for work projects - Desktop only */
+@media (hover: hover) and (pointer: fine) {
+  img, picture, video, canvas, svg {
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-/* Smooth hover effects for media */
-[data-component="Media"] {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
+  /* Smooth hover effects for media */
+  [data-component="Media"] {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-[data-component="Media"]:hover {
-  transform: scale(1.02);
+  [data-component="Media"]:hover {
+    transform: scale(1.02);
+  }
 }
 
 /* Hide on mobile/small screens */
@@ -75,5 +77,42 @@ img, picture, video, canvas, svg {
 @media (max-width: 768px) {
   .m-hide {
     display: none !important;
+  }
+}
+
+/* Completely disable transforms and transitions on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  *:not([class*="marquee"]),
+  *:not([class*="marquee"])::before,
+  *:not([class*="marquee"])::after {
+    transition: none !important;
+  }
+  
+  *:hover,
+  *:active,
+  *:focus,
+  *:visited {
+    transform: none !important;
+    scale: 1 !important;
+    box-shadow: none !important;
+  }
+  
+  a:hover, button:hover, [role="button"]:hover {
+    transform: none !important;
+  }
+}
+
+/* Additional mobile safety - disable on small screens too */
+@media (max-width: 768px) {
+  *:not([class*="marquee"]),
+  *:not([class*="marquee"])::before,
+  *:not([class*="marquee"])::after {
+    transition: none !important;
+  }
+  
+  *:hover,
+  *:active {
+    transform: none !important;
+    scale: 1 !important;
   }
 }
