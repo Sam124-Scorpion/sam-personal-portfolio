@@ -13,6 +13,7 @@
     position: sticky;
     height: fit-content;
     top: var(--static-space-64);
+    flex-shrink: 0;
 }
 
 .marqueeContainer {
@@ -120,20 +121,23 @@
 
 @media (max-width: breakpoints.$s) {
     .avatar {
-        position: relative;
-        top: auto;
+        position: relative !important;
+        top: auto !important;
         width: 100%;
         max-width: 100%;
         padding: 0;
         margin-bottom: var(--static-space-24);
+        flex-shrink: 0;
     }
 
     .textAlign {
         text-align: center;
+        width: 100%;
     }
 
     .blockAlign {
         align-self: center;
+        width: 100%;
     }
 
     .marqueeContent {
