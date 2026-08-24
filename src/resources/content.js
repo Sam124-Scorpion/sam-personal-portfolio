@@ -240,7 +240,7 @@ const about = {
     skills: [
       {
         title: "Programming Languages",
-        description: <>C, C++, Java, Python3</>,
+        description: <>C, C++, Python3</>,
         images: [],
       },
       {
@@ -250,7 +250,7 @@ const about = {
       },
       {
         title: "Backend Development",
-        description: <>Node.js, Python with Django, Nest.js</>,
+        description: <>Node.js, Python with Django, FastAPI</>,
         images: [],
       },
       {
@@ -260,7 +260,7 @@ const about = {
       },
       {
         title: "Machine Learning & Deep Learning",
-        description: <>Scikit-Learn, Mlxtend, TensorFlow, NLP, HuggingFace, Computer Vision</>,
+        description: <>Scikit-Learn, Keras, Computer Vision</>,
         images: [],
       },
     ],
