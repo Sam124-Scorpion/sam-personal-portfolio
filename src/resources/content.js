@@ -104,28 +104,28 @@ const about = {
         name: "React.js Mastery",
         issuer: "Udemy",
         date: "2024",
-        icon: "⭐",
+        icon: "",
         certificate: "/certificates/react-mastery.pdf",
       },
       {
         name: "Full Stack Web Development",
         issuer: "Coursera",
         date: "2023",
-        icon: "🏆",
+        icon: "",
         certificate: "/certificates/full-stack-web-development.pdf",
       },
       {
         name: "UI/UX Design Fundamentals",
         issuer: "Interaction Design Foundation",
         date: "2023",
-        icon: "🎨",
+        icon: "",
         certificate: "/certificates/ui-ux-design-fundamentals.pdf",
       },
       {
         name: "Machine Learning Specialization",
         issuer: "Coursera",
         date: "2024",
-        icon: "🤖",
+        icon: "",
         certificate: "/certificates/machine-learning-specialization.pdf",
       },
     ],
@@ -158,34 +158,6 @@ const about = {
           </>,
           <>
             Delivered insights through visualizations and reports, enhancing model accuracy for real-time applications.
-          </>,
-        ],
-        images: [],
-      },
-      {
-        company: "Tech Solutions India",
-        timeframe: "2022 - Present",
-        role: "Full Stack Web Developer",
-        achievements: [
-          <>
-            Developed user-friendly UI/UX interfaces that increased user retention by 35% and minimized bounce rates.
-          </>,
-          <>
-            Enhanced backend performance, cutting API response times by 40% through database optimization and caching strategies.
-          </>,
-        ],
-        images: [],
-      },
-      {
-        company: "Creative Sam Studio",
-        timeframe: "2022 - Present",
-        role: "UI/UX Developer & Graphic Designer with Branding expertise and Digital Marketing",
-        achievements: [
-          <>
-            Designed responsive web interfaces for over 15 client projects utilizing modern frameworks and design systems.
-          </>,
-          <>
-            Partnered with backend teams to address complex architectural challenges and improve system reliability.
           </>,
         ],
         images: [],
@@ -227,11 +199,11 @@ const about = {
         description: <>Finished a three-week intensive cybersecurity program covering essential security concepts, threat detection, and industry best practices with professional certification.</>,
       },
       {
-        name: "UI/UX Design Masterclass",
-        organization: "Design Academy",
-        date: "2023",
-        description: <>Advanced training in user-centered design, prototyping, and design systems using Figma and Adobe XD.</>,
-      },
+        name: "Web Developement with Django Framework using pyhton with AI Integration",
+        organization: "Euphoria GenX Pvt Ltd.",
+        date: "2025",
+        description: <>Participated in a hands-on workshop focused on web development using Django framework, integrating AI functionalities, and deploying applications effectively.</>
+      }
     ],
   },
   technical: {
