@@ -5,11 +5,11 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Full Stack Web Developer & UI/UX Designer ast Creative Sam Studio",
+  role: "Full-Stack Developer & Data Science Enthusiast",
   avatar: "/images/avatar2.jpg",
   email: "soumikdas261@gmail.com",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bengali" , "Hindi"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -17,8 +17,7 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about data science, machine learning, and building practical AI-powered applications.
     </>
   ),
 };
@@ -34,12 +33,7 @@ const social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/soumik-das-945465309/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/sam124/",
   },
   {
     name: "Email",
@@ -54,16 +48,16 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between Modern graphical creativity and Full fledged software development</>,
+  headline: <>Building intelligent applications with data, AI, and thoughtful engineering</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Drawaky</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Featured project: <strong className="ml-4">Resume Parser with RAG</strong></>,
+    href: "/work/resume-parser-with-rag",
   },
   subline: (
     <>
-      I&apos;m soumik, a designer engineer at Creative Sam Studio, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I&apos;m Soumik, a Data Science graduate and full-stack developer focused on building
+      <br /> scalable web applications, machine learning pipelines, and RAG-powered tools.
     </>
   ),
   
@@ -82,68 +76,41 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        I am a web developer and UI/UX designer from India, dedicated to crafting scalable web applications. 
-        My expertise lies in creating user-friendly interfaces and tackling complex technical problems, merging design with functionality.
-        Currently, I am in my final year at Brainware University in West Bengal and am actively seeking work opportunities.
+        I am a Data Science graduate and full-stack developer from India, focused on building scalable,
+        intelligent applications. My experience spans Python, Django, FastAPI, exploratory data analysis,
+        machine learning pipelines, and retrieval-augmented generation (RAG). I enjoy turning complex
+        problems into practical products and am currently completing my B.Tech in Computer Science and Engineering
+        at Brainware University.
       </>
     ),
   },
   certifications: {
-    display: true,
+    display: false,
     title: "Certifications",
-    items: [
-      {
-        name: "React.js Mastery",
-        issuer: "Udemy",
-        date: "2024",
-        icon: "",
-        certificate: "/certificates/react-mastery.pdf",
-      },
-      {
-        name: "Full Stack Web Development",
-        issuer: "Coursera",
-        date: "2023",
-        icon: "",
-        certificate: "/certificates/full-stack-web-development.pdf",
-      },
-      {
-        name: "UI/UX Design Fundamentals",
-        issuer: "Interaction Design Foundation",
-        date: "2023",
-        icon: "",
-        certificate: "/certificates/ui-ux-design-fundamentals.pdf",
-      },
-      {
-        name: "Machine Learning Specialization",
-        issuer: "Coursera",
-        date: "2024",
-        icon: "",
-        certificate: "/certificates/machine-learning-specialization.pdf",
-      },
-    ],
+    items: [],
   },
   work: {
     display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "WebTek Labs Solutions Pvt. Ltd",
-        timeframe: "Jan - Feb 2025",
-        role: "Web Development Intern",
+        company: "Euphoria GenX Pvt. Ltd. (Brainware University)",
+        timeframe: "Aug 2025 - Nov 2025",
+        role: "Industry Intern - Web Dev (Django + AI)",
         achievements: [
           <>
-            Contributed to web application development and assisted in debugging across various projects.
+            Developed an AI-integrated expense management system using Python and Django, applying MVT architecture and 8+ REST APIs to reduce manual data entry by 85%.
           </>,
           <>
-            Engaged in unit testing and collaborated with senior developers to maintain code quality.
+            Completed a 3-month industry internship in Python/Django web development with AI integration, earning dual certifications from the industry partner and university.
           </>,
         ],
         images: [],
@@ -154,10 +121,10 @@ const about = {
         role: "Machine Learning Intern",
         achievements: [
           <>
-            Conducted data preprocessing, model training, and performance evaluation for a sentiment analysis project using Python, Pandas, and scikit-learn.
+            Developed an end-to-end sentiment analysis pipeline using Python, Pandas, and Scikit-Learn, achieving 87%+ model accuracy.
           </>,
           <>
-            Delivered insights through visualizations and reports, enhancing model accuracy for real-time applications.
+            Improved model performance through iterative preprocessing and hyperparameter tuning, with real-time evaluation and visualized performance reporting.
           </>,
         ],
         images: [],
@@ -170,69 +137,55 @@ const about = {
     institutions: [
       {
         name: "Brainware University",
-        description: <>Pursuing a Bachelor&apos;s degree in Computer Science and Engineering, focusing on software development, data structures, algorithms, and modern web technologies.</>,
+        description: <>B.Tech in Computer Science and Engineering (Data Science), 2022 - 2026. Graduating with an 8.6/10 CGPA.</>,
       },
       {
         name: "Higher Secondary Education",
-        description: <>Completed higher secondary education at Rambhola High School in 2022, emphasizing Science and Mathematics, which sharpened my analytical and problem-solving skills.</>,
+        description: <>Higher Secondary (12th), Cooch Behar Rambhola High School, WBCHSE, 2020 - 2022. Completed with 82%.</>,
       },
       {
         name: "Secondary Education",
-        description: <>Completed secondary education at Maharaja Nripendra Narayan High School in 2020 with a concentration on Mathematics and Computer Science, establishing a solid foundation in analytical thinking and problem-solving.</>,
+        description: <>Secondary (10th), Maharaja Nripendra Narayan High School, WBBSE, 2018 - 2020. Completed with 84%.</>,
       },
     ],
   },
   workshops: {
-    display: true,
+    display: false,
     title: "Workshops & Training",
-    events: [
-      {
-        name: "Diploma in Software Application Programme",
-        organization: "Webel Information Technology Pvt Ltd.",
-        date: "2022",
-        description: <>Completed a comprehensive 12-month diploma program covering core software development principles, application development, and industry-relevant technologies.</>,
-      },
-      {
-        name: "Cybersecurity Essentials Programme",
-        organization: "NetCAD Academy",
-        date: "2024",
-        description: <>Finished a three-week intensive cybersecurity program covering essential security concepts, threat detection, and industry best practices with professional certification.</>,
-      },
-      {
-        name: "Web Developement with Django Framework using pyhton with AI Integration",
-        organization: "Euphoria GenX Pvt Ltd.",
-        date: "2025",
-        description: <>Participated in a hands-on workshop focused on web development using Django framework, integrating AI functionalities, and deploying applications effectively.</>
-      }
-    ],
+    events: [],
   },
   technical: {
     display: true,
     title: "Technical Skills",
     skills: [
       {
-        title: "Programming Languages",
-        description: <>C, C++, Python3</>,
+        title: "Programming & Query Languages",
+        description: <>Python, SQL, C++</>,
         images: [],
       },
       {
-        title: "Frontend Development",
-        description: <>HTML5, CSS3, JavaScript (ES6+), React.js, Next.js, Vue.js</>,
+        title: "Libraries",
+        description: <>Pandas, NumPy, Scikit-learn, LangChain</>,
         images: [],
       },
       {
-        title: "Backend Development",
-        description: <>Node.js, Python with Django, FastAPI</>,
+        title: "Frameworks",
+        description: <>Django, FastAPI, React, Streamlit</>,
         images: [],
       },
       {
-        title: "Databases",
-        description: <>SQL (MySQL), NoSQL (MongoDB)</>,
+        title: "ML & AI",
+        description: <>RAG, Machine Learning</>,
         images: [],
       },
       {
-        title: "Machine Learning & Deep Learning",
-        description: <>Scikit-Learn, Keras, Computer Vision</>,
+        title: "Data Analytics & Visualisation",
+        description: <>Data Analysis, EDA, Excel, Tableau, Matplotlib, Seaborn</>,
+        images: [],
+      },
+      {
+        title: "Databases & Tools",
+        description: <>PostgreSQL, MySQL, SQLite, Git, GitHub, Postman</>,
         images: [],
       },
     ],
@@ -252,7 +205,7 @@ const work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Data science, machine learning, and full-stack projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

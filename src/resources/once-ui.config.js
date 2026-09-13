@@ -21,7 +21,7 @@ const display = {
 // Enable password protection on selected routes
 // Set password in the .env file, refer to .env.example
 const protectedRoutes = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  // Removed unsupported route
 };
 
 // Import and set font for each variant
@@ -209,17 +209,16 @@ const mailchimp = {
 // default schema data
 const schema = {
   logo: "",
-  type: "Organization",
-  name: "Once UI",
+  type: "Person",
+  name: home.title,
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "soumikdas261@gmail.com",
 };
 
 // social links
 const sameAs = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  linkedin: "https://www.linkedin.com/in/sam124/",
+  github: "https://github.com/Sam124-Scorpion",
 };
 
 
