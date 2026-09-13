@@ -72,7 +72,7 @@ export default function About() {
     {
       title: about.workshops?.title || "Workshops & Training",
       display: about.workshops?.display || false,
-      items: about.workshops?.events?.map((event) => event.name) || [],
+      items: [],
     },
     {
       title: about.technical.title,
@@ -444,34 +444,6 @@ export default function About() {
                     </Text>
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {institution.description}
-                    </Text>
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-
-          {about.workshops?.display && (
-            <>
-              <Heading as="h2" id={about.workshops.title} variant="display-strong-s" marginBottom="m">
-                {about.workshops.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.workshops.events.map((event, index) => (
-                  <Column key={`${event.name}-${index}`} fillWidth gap="4">
-                    <Flex fillWidth horizontal="between" vertical="end" marginBottom="4">
-                      <Text id={event.name} variant="heading-strong-l">
-                        {event.name}
-                      </Text>
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
-                        {event.date}
-                      </Text>
-                    </Flex>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="4">
-                      {event.organization}
-                    </Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {event.description}
                     </Text>
                   </Column>
                 ))}
